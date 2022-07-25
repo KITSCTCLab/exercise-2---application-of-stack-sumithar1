@@ -27,6 +27,7 @@ class Evaluate:
       True if it is empty, else returns False.
     """
       # Write your code here
+      return len(self.stack) == 0
 
 
   def pop(self):
@@ -36,6 +37,8 @@ class Evaluate:
       The data which is popped out if the stack is not empty.
     """
     # Write your code here
+    if not isEmpty(self.stack):
+        return self.stack.pop()
 
 
   def push(self, operand):
@@ -45,6 +48,8 @@ class Evaluate:
       operand: The operand to be pushed.
     """
     # Write your code here
+    if len(self.stack) <= self.size_of_stack:
+        self.stack.append(operand)
 
 
   def validate_postfix_expression(self, expression):
@@ -56,7 +61,22 @@ class Evaluate:
       True if the expression is valid, else returns False.
     """
     # Write your code here
+    for character in self.expression:
+        if character not in '1234567890' or character not in '+-*/^:
+            return False
+    return True
 
+  def evaluation(self, number_1, number_2, operator):
+        if self.operator == '+':
+            return number_2 + number_1
+        elif self.operator == '-':
+            return number_2 - number_1
+        elif self.operator == '*':
+            return number_2 * number_1
+        elif self.operator == '/':
+            return number_2 / number_1
+        elif self.operator == '^':
+            return number_2 ** number_1
 
   def evaluate_postfix_expression(self, expression):
     """
@@ -67,6 +87,14 @@ class Evaluate:
       The result of evaluated postfix expression.
     """
     # Write your code here
+    for characters in self.expression:
+        if characters in '1234567890':
+            evaluate.push(characters)
+        else:
+            self.number_1 = int(evaluate.pop)
+            self.number_2 = int(evaluate.pop)
+            self.value = evaluate.evaluation(number_1, number_2, characters)
+    print(self.stack[0])
 
 
 # Do not change the following code
