@@ -1,20 +1,19 @@
 class Evaluate:
-  """This class validates and evaluate postfix expression.
+"""This class validates and evaluate postfix expression.
   Attributes:
       top: An integer which denotes the index of the element at the top of the stack currently.
       size_of_stack: An integer which represents the size of stack.
-      stack: A List which acts as a Stack.
-  """
+      stack: A List which acts as a Stack."""
     # Write your code here
 
 
     def __init__(self, size):
-      """Inits Evaluate with top, size_of_stack and stack.
+    """Inits Evaluate with top, size_of_stack and stack.
       Arguments:
       top:An integer which points to the top most element in the stack.
       size_of_stack: An integer which represents size of stack.
       stack: A list which maintians the elements of stack.
-      """
+    """
           self.top = -1
           self.size_of_stack = size
           self.stack = []
@@ -62,7 +61,7 @@ class Evaluate:
     """
     # Write your code here
         for character in self.expression:
-            if character not in '1234567890' or character not in '+-*/^:
+            if character not in ' 1234567890' or character not in '+-*/^':
                 return False
         return True
 
