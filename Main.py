@@ -14,10 +14,10 @@ class Evaluate:
       top:An integer which points to the top most element in the stack.
       size_of_stack: An integer which represents size of stack.
       stack: A list which maintians the elements of stack.
-    """
-        self.top = -1
-        self.size_of_stack = size
-        self.stack = []
+      """
+          self.top = -1
+          self.size_of_stack = size
+          self.stack = []
 
 
     def isEmpty(self):
