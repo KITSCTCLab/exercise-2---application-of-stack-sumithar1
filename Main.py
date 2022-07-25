@@ -54,7 +54,7 @@ class Evaluate:
     #Returns:
     #  True if the expression is valid, else returns False.
     # Write your code here
-        for character in self.expression:
+        for character in expression:
             if character not in ' 1234567890' or character not in '+-*/^':
                 return False
         return True
