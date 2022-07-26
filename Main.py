@@ -79,7 +79,6 @@ class Evaluate:
         self.pop()
         self.push(result)
     return self.pop()
-    
 
 
 # Do not change the following code
