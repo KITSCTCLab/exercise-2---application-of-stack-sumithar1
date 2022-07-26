@@ -58,6 +58,7 @@ class Evaluate:
                 return False
         return True
 
+       
     def evaluation(self, number_1, number_2, operator):
           if self.operator == '+':
               return number_2 + number_1
