@@ -78,7 +78,7 @@ class Evaluate:
     #Returns:
     #  The result of evaluated postfix expression.
         # Write your code here
-      for characters in self.expression:
+      for characters in expression:
           if characters in '1234567890':
               evaluate.push(characters)
           else:
