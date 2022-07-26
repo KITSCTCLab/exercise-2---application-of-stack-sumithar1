@@ -6,7 +6,6 @@ class Evaluate:
     #  stack: A List which acts as a Stack."""
     # Write your code here
 
-
     def __init__(self, size):
     #Inits Evaluate with top, size_of_stack and stack.
      # Arguments:
